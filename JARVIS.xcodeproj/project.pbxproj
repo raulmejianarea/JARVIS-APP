@@ -14,6 +14,10 @@
 		0E4990EB2A8158AC00E0D396 /* JARVISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4990EA2A8158AC00E0D396 /* JARVISTests.swift */; };
 		0E4990F52A8158AC00E0D396 /* JARVISUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4990F42A8158AC00E0D396 /* JARVISUITests.swift */; };
 		0E4990F72A8158AC00E0D396 /* JARVISUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4990F62A8158AC00E0D396 /* JARVISUITestsLaunchTests.swift */; };
+		0E4991052A815A5600E0D396 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4991042A815A5600E0D396 /* SwiftOpenAI */; };
+		0E4991072A815A7200E0D396 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4991062A815A7200E0D396 /* ViewModel.swift */; };
+		0E49910A2A81606A00E0D396 /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4991092A81606A00E0D396 /* TextMessageView.swift */; };
+		0E52F7BB2A82B4FA00ACEC0D /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E52F7BA2A82B4FA00ACEC0D /* ConversationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		0E4990F02A8158AC00E0D396 /* JARVISUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JARVISUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4990F42A8158AC00E0D396 /* JARVISUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JARVISUITests.swift; sourceTree = "<group>"; };
 		0E4990F62A8158AC00E0D396 /* JARVISUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JARVISUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0E4991062A815A7200E0D396 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0E4991092A81606A00E0D396 /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
+		0E52F7BA2A82B4FA00ACEC0D /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4991052A815A5600E0D396 /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,8 @@
 		0E4990D82A8158A800E0D396 /* JARVIS */ = {
 			isa = PBXGroup;
 			children = (
+				0E4991082A81601D00E0D396 /* Subviews */,
+				0E4991062A815A7200E0D396 /* ViewModel.swift */,
 				0E4990D92A8158A800E0D396 /* JARVISApp.swift */,
 				0E4990DB2A8158A800E0D396 /* ContentView.swift */,
 				0E4990DD2A8158AB00E0D396 /* Assets.xcassets */,
@@ -127,6 +137,15 @@
 			path = JARVISUITests;
 			sourceTree = "<group>";
 		};
+		0E4991082A81601D00E0D396 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				0E4991092A81606A00E0D396 /* TextMessageView.swift */,
+				0E52F7BA2A82B4FA00ACEC0D /* ConversationView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +162,9 @@
 			dependencies = (
 			);
 			name = JARVIS;
+			packageProductDependencies = (
+				0E4991042A815A5600E0D396 /* SwiftOpenAI */,
+			);
 			productName = JARVIS;
 			productReference = 0E4990D62A8158A800E0D396 /* JARVIS.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 0E4990CD2A8158A800E0D396;
+			packageReferences = (
+				0E4991032A815A5600E0D396 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+			);
 			productRefGroup = 0E4990D72A8158A800E0D396 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4990DC2A8158A800E0D396 /* ContentView.swift in Sources */,
+				0E49910A2A81606A00E0D396 /* TextMessageView.swift in Sources */,
+				0E4991072A815A7200E0D396 /* ViewModel.swift in Sources */,
 				0E4990DA2A8158A800E0D396 /* JARVISApp.swift in Sources */,
+				0E52F7BB2A82B4FA00ACEC0D /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E4991032A815A5600E0D396 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E4991042A815A5600E0D396 /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E4991032A815A5600E0D396 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E4990CE2A8158A800E0D396 /* Project object */;
 }
